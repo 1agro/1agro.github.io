@@ -1,134 +1,165 @@
-
-
-
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <title></title>
+<head>
+    <title>Sistemas Grupo Locks</title>
     <meta charset="utf-8">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://uploaddeimagens.com.br/images/003/983/014/original/logo_novo_lo.png?1660659765" type="image/png">
     <style>
-img {
-  width: 100px;
-  height: 100px;
-  border-radius: 100px;
-  margin-right: auto;
-  margin-left: auto;
-  display: block;
-  margin-top: 20px;
-}
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
 
-table {
-  margin: auto;
-}
+        .background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://uploaddeimagens.com.br/images/004/149/873/original/WallpaperAgosto.jpg?1668022401') no-repeat center center fixed;
+            background-size: cover;
+            z-index: -1;
+            filter: brightness(0.7);
+        }
 
-h1 {
-  text-align: center;
-  font-family: Arial, Helvetica, sans-serif;
-  color: white;
-  font-size: 50px;
-}
+        .overlay {
+            position: relative;
+            z-index: 1;
+        }
 
-.teste:hover img {
-  -webkit-transform: scale(1.1);
-  transform: scale(1.1);
-}
+        h1 {
+            text-align: center;
+            color: white;
+            font-size: 3em;
+            margin: 20px 0;
+        }
 
-	
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .container div {
+            flex: 1 1 100px;
+            max-width: 150px;
+            text-align: center;
+        }
+
+        img {
+            width: 100%;
+            max-width: 100px;
+            height: auto;
+            border-radius: 50%;
+            display: block;
+            margin: 0 auto;
+            transition: transform 0.3s ease;
+        }
+
+        .teste:hover img {
+            transform: scale(1.1);
+        }
+
+        @media (min-width: 768px) {
+            h1 {
+                font-size: 4em;
+            }
+
+            .container div {
+                flex: 1 1 150px;
+                max-width: 150px;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            h1 {
+                font-size: 5em;
+            }
+
+            .container div {
+                flex: 1 1 200px;
+                max-width: 200px;
+            }
+        }
     </style>
-  </head>
-
-  <body background="https://uploaddeimagens.com.br/images/004/149/873/original/WallpaperAgosto.jpg?1668022401">
-    
-    <table border="0px" width="60%"> 
-      <tr>
-       
-        <td colspan="13" div="cabecalho"><h1>Sistemas Grupo Locks</h1> </td>
-      </tr>
-    
-      <tr>
-        <td>
-          
-         <a title="Sap" href="https://rds.grupolocks.com.br/RDWeb"  target="_blank">
-           <div class="teste">
-          <img src="https://uploaddeimagens.com.br/images/004/149/959/original/SAPB1.png?1668022517" ></a>
+</head>
+<body>
+    <div class="background"></div>
+    <div class="overlay">
+        <h1>Sistemas Grupo Locks</h1>
+        <div class="container">
+            <div class="teste">
+                <a title="Sap" href="https://rds.grupolocks.com.br/RDWeb" target="_blank">
+                    <img src="https://uploaddeimagens.com.br/images/004/149/959/original/SAPB1.png?1668022517" alt="Sap">
+                </a>
+            </div>
+            <div class="teste">
+                <a title="Pims" href="http://pims.grupolocks.com.br:8380/pimsmc/login.jsp" target="_blank">
+                    <img src="https://uploaddeimagens.com.br/images/004/150/025/original/PIMSLOGO.png?1668022606" alt="Pims">
+                </a>
+            </div>
+            <div class="teste">
+                <a title="Fluig" href="http://fluig.grupolocks.com.br:8081/portal/home" target="_blank">
+                    <img src="https://uploaddeimagens.com.br/images/004/150/057/original/FLUIG.png?1668022653" alt="Fluig">
+                </a>
+            </div>
+            <div class="teste">
+                <a title="E-mail" href="https://login.microsoftonline.com" target="_blank">
+                    <img src="https://uploaddeimagens.com.br/images/004/150/096/original/OUTLOOK.png?1668022706" alt="E-mail">
+                </a>
+            </div>
+            <div class="teste">
+                <a title="Rm" href="https://rds.grupolocks.com.br/RDWeb" target="_blank">
+                    <img src="https://uploaddeimagens.com.br/images/004/150/126/original/RM.png?1668022756" alt="Rm">
+                </a>
+            </div>
+            <div class="teste">
+                <a title="Portal Rm" href="http://colaborador.grupolocks.com.br/corpore.net" target="_blank">
+                    <img src="https://uploaddeimagens.com.br/images/004/150/146/original/PORTALRM.png?1668022812" alt="Portal Rm">
+                </a>
+            </div>
+            <div class="teste">
+                <a title="Bry" href="https://cloud.bry.com.br" target="_blank">
+                    <img src="https://uploaddeimagens.com.br/images/004/150/200/original/BRY.png?1668022901" alt="Bry">
+                </a>
+            </div>
+            <div class="teste">
+                <a title="Meu Rh" href="http://colaborador.grupolocks.com.br/rm/web/app/RH/PortalMeuRH/#/login" target="_blank">
+                    <img src="https://uploaddeimagens.com.br/images/004/150/225/original/MEURH.png?1668022941" alt="Meu Rh">
+                </a>
+            </div>
+            <div class="teste">
+                <a title="Tracecotton" href="http://172.20.10.3:8085/Login" target="_blank">
+                    <img src="https://uploaddeimagens.com.br/images/004/150/272/original/TRACECOTTON.png?1668023000" alt="Tracecotton">
+                </a>
+            </div>
+            <div class="teste">
+                <a title="Agrosig" href="http://172.20.10.3:8082/Login" target="_blank">
+                    <img src="https://uploaddeimagens.com.br/images/004/150/295/original/AGROSIG.png?1668023043" alt="Agrosig">
+                </a>
+            </div>
+            <div class="teste">
+                <a title="Impressão de Etiqueta" href="http://172.20.10.7/Reports/browse/SAP/ESTOQUE" target="_blank">
+                    <img src="https://uploaddeimagens.com.br/images/004/158/229/original/Impress%C3%B5es_Etiqueta_2.png?1668089563" alt="Impressão de Etiqueta">
+                </a>
+            </div>
+            <div class="teste">
+                <a title="Swecom" href="https://swecom.grupolocks.com.br/" target="_blank">
+                    <img src="https://uploaddeimagens.com.br/images/004/764/951/original/ic_logo_swecom.png?1712151763" alt="Swecom">
+                </a>
+			</div>	
+			<!--
+				<div class="teste">
+                <a title="PowerBi" href="https://swecom.grupolocks.com.br/" target="_blank">
+                    <img src="https://uploaddeimagens.com.br/images/004/150/349/original/BI.png?1668023164" alt="PowerBi">
+                </a>
+            </div> -->
+            </div>
         </div>
-        </td>
-        <td>
-          <div class="teste">
-          <a title="Pims" href="http://pims.grupolocks.com.br:8380/pimsmc/login.jsp"  target="_blank"><img src="https://uploaddeimagens.com.br/images/004/150/025/original/PIMSLOGO.png?1668022606"></a>
-          <div>
-        </td>
-        <td>
-          <div class="teste">
-          <a title="Fluig" href="http://fluig.grupolocks.com.br:8081/portal/home"  target="_blank"><img src="https://uploaddeimagens.com.br/images/004/150/057/original/FLUIG.png?1668022653"></a>
-          <div>
-        </td>
-        <td>
-          <div class="teste">
-          <a title="E-mail" href="https://login.microsoftonline.com"  target="_blank"><img src="https://uploaddeimagens.com.br/images/004/150/096/original/OUTLOOK.png?1668022706"></a>
-          <div>
-        </td>
-      </tr>
-          <tr>
-        <td>
-          <div class="teste">
-         <a title="Rm" href="https://rds.grupolocks.com.br/RDWeb"  target="_blank"><img src="https://uploaddeimagens.com.br/images/004/150/126/original/RM.png?1668022756"></a>
-         <div>
-        </td>
-        <td>
-          <div class="teste">
-         <a  title="Portal Rm" href="http://colaborador.grupolocks.com.br/corpore.net"  target="_blank"><img src="https://uploaddeimagens.com.br/images/004/150/146/original/PORTALRM.png?1668022812"></a>
-         <div>
-        </td>
-        <td>
-          <div class="teste">
-          <a title="Bry" href="https://cloud.bry.com.br"  target="_blank"><img src="https://uploaddeimagens.com.br/images/004/150/200/original/BRY.png?1668022901"></a>
-          <div>
-        </td>
-        <td>
-          <div class="teste">
-          <a title="Meu Rh" href="http://colaborador.grupolocks.com.br/rm/web/app/RH/PortalMeuRH/#/login"  target="_blank"><img src="https://uploaddeimagens.com.br/images/004/150/225/original/MEURH.png?1668022941"></a>
-          <div>
-        </td>
-      </tr>
-
-        <tr>
-        <td>
-          <div class="teste">
-          <a title="Tracecotton" href="http://172.20.10.3:8085/Login"  target="_blank"><img src="https://uploaddeimagens.com.br/images/004/150/272/original/TRACECOTTON.png?1668023000"></a>
-          <div>
-        </td>
-        <td>
-          <div class="teste">
-          <a  title="Agrosig" href="http://172.20.10.3:8082/Login"  target="_blank"><img src="https://uploaddeimagens.com.br/images/004/150/295/original/AGROSIG.png?1668023043"></a>
-          <div>
-        </td>
-       <td>
-         <div class="teste">
-          <a title="Impressao de Etiqueta"  href="http://172.20.10.7/Reports/browse/SAP/ESTOQUE"  target="_blank"><img src="https://uploaddeimagens.com.br/images/004/158/229/original/Impress%C3%B5es_Etiqueta_2.png?1668089563"></a>
-         <div>
-        </td>
-
-
-<!--
-        <td>
-          <div class="teste">
-         <a title="Power Bi" href="https://app.powerbi.com/"  target="_blank"><img src="https://uploaddeimagens.com.br/images/004/150/349/original/BI.png?1668023164"></a>
-         <div>
-        </td> -->
-     
-        <td>
-          <div class="teste">
-          <a href="https://swecom.grupolocks.com.br/"  target="_blank"><img src="https://uploaddeimagens.com.br/images/004/764/951/original/ic_logo_swecom.png?1712151763"></a>
-          <div>
-        </td>
-
-	
-      </tr>
-
-    </table>
-    
-
-  </body>
+    </div>
+</body>
 </html>
