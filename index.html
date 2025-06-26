@@ -6,14 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="icon.png" type="image/png">
     <style>
+        :root {
+            color-scheme: light dark;
+            --bg-color: #f4f4f4;
+            --text-color: #000;
+            --card-bg: rgba(255, 255, 255, 0.1);
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg-color: #121212;
+                --text-color: #fff;
+                --card-bg: rgba(255, 255, 255, 0.1);
+            }
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
         body {
             margin: 0;
-            padding: 0;
-            font-family: Arial, Helvetica, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: var(--bg-color);
+            color: var(--text-color);
         }
 
         .background {
-            position: absolute;
+            position: fixed;
             top: 0;
             left: 0;
             width: 100%;
@@ -21,73 +41,72 @@
             background: url('Wallpaper-18-anos.png') no-repeat center center fixed;
             background-size: cover;
             z-index: -1;
-            filter: brightness(0.7);
+            filter: brightness(0.6);
         }
 
         .overlay {
             position: relative;
             z-index: 1;
+            padding: 40px 20px;
         }
 
         h1 {
+            color: var(--text-color);
             text-align: center;
-            color: white;
             font-size: 3em;
-            margin: 20px 0;
+            margin-bottom: 40px;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
         }
 
         .container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
         }
 
-        .container div {
-            flex: 1 1 100px;
-            max-width: 150px;
+        .app-card {
+            background: var(--card-bg);
+            border-radius: 16px;
+            padding: 15px;
+            backdrop-filter: blur(10px);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
             text-align: center;
         }
 
-        img {
-            width: 100%;
-            max-width: 100px;
-            height: auto;
-            border-radius: 50%;
+        .app-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .app-card img {
+            width: 100px;
+            height: 100px;
+            object-fit: contain;
+            border-radius: 16px;
+            background-color: white;
+            padding: 10px;
+        }
+
+        .app-card a {
             display: block;
-            margin: 0 auto;
-            transition: transform 0.3s ease;
+            text-decoration: none;
+            margin-top: 10px;
+            color: var(--text-color);
+            font-weight: 600;
+            font-size: 0.9em;
         }
 
-        .teste:hover img {
-            transform: scale(1.1);
-        }
-
-	.trace:hover img {
-            transform: scale(1.2);
-	    padding: 2px
-        }
-
-        @media (min-width: 768px) {
+        @media (max-width: 500px) {
             h1 {
-                font-size: 4em;
+                font-size: 2em;
             }
 
-            .container div {
-                flex: 1 1 150px;
-                max-width: 150px;
-            }
-        }
-
-        @media (min-width: 1024px) {
-            h1 {
-                font-size: 5em;
-            }
-
-            .container div {
-                flex: 1 1 200px;
-                max-width: 200px;
+            .app-card img {
+                width: 80px;
+                height: 80px;
             }
         }
     </style>
@@ -97,83 +116,27 @@
     <div class="overlay">
         <h1>Sistemas Grupo Locks</h1>
         <div class="container">
-            <div class="teste">
-                <a title="Sap" href="https://rds.grupolocks.com.br/RDWeb" target="_blank">
-                    <img src="SAP.png" alt="Sap">
-                </a>
-            </div>
-            <div class="teste">
-                <a title="Pims" href="http://pims.grupolocks.com.br:8380/pimsmc/login.jsp" target="_blank">
-                    <img src="PIMS.png" alt="Pims">
-                </a>
-            </div>
-            <div class="teste">
-                <a title="Fluig" href="https://fluig.grupolocks.com.br:8082" target="_blank">
-                    <img src="FLUIG.png" alt="Fluig">
-                </a>
-            </div>
-            <div class="teste">
-                <a title="E-mail" href="https://login.microsoftonline.com" target="_blank">
-                    <img src="OUTLOOK.png" alt="E-mail">
-                </a>
-            </div>
-            <div class="teste">
-                <a title="Rm" href="https://rds.grupolocks.com.br/RDWeb" target="_blank">
-                    <img src="RM.png" alt="Rm">
-                </a>
-            </div>
-            <div class="teste">
-                <a title="Eco" href="https://locks.pecuariaonline.com.br/" target="_blank">
-                    <img src="eco.png" alt="Eco">
-                </a>
-            </div>
-            <div class="teste">
-                <a title="Bry" href="https://cloud.bry.com.br" target="_blank">
-                    <img src="BRY.png" alt="Bry">
-                </a>
-            </div>
-            <div class="teste">
-                <a title="Meu Rh" href="http://colaborador.grupolocks.com.br/rm/web/app/RH/PortalMeuRH/#/login" target="_blank">
-                    <img src="meurh.png" alt="Meu Rh">
-                </a>
-            </div>
-            <div class="teste">
-                <a title="Tracecotton" href="https://locks.tracecotton.app/" target="_blank">
-                    <img src="tracecotton.png" alt="Tracecotton">
-                </a>
-            </div>
-            <div class="teste">
-                <a title="Agrosig" href="http://172.20.10.3:8082/Login" target="_blank">
-                    <img src="AGROSIG.png" alt="Agrosig">
-                </a>
-            </div>
-            <div class="teste">
-                <a title="Impressão de Etiqueta" href="http://172.20.10.7/Reports/browse/SAP/ESTOQUE" target="_blank">
-                    <img src="Impressoes_Etiqueta.png" alt="Impressão de Etiqueta">
-                </a>
-            </div>
-            <div class="teste">
-                <a title="Swecom" href="https://swecom.grupolocks.com.br/" target="_blank">
-                    <img src="swecom.png" alt="Swecom">
-                </a>
-			</div>	
-			 <div class="teste">
-                <a title="Siast" href="https://acesso.siast.com.br/Account/Login" target="_blank">
-                    <img src="siast.png" alt="Siast">
-                </a>
-			</div>
-			 <div class="teste">
-                <a title="Elofy" href="https://app.elofy.com.br/?_gl=1*10l9b0i*_gcl_au*MTk3NTgzNDAxMy4xNzQwNDg0Mzgz*_ga*ODU3MTE1NTY0LjE3MzI1NjY4MjU.*_ga_PV5M4RYS0Q*MTc0MDQ4NDM4Mi4xLjEuMTc0MDQ4NTc1Mi41NS4wLjE1MDY4NTM0MTc." target="_blank">
-                    <img src="elofy.png" alt="Elofy">
-                </a>
-			</div>
-			<!--
-				<div class="teste">
-                <a title="PowerBi" href="https://swecom.grupolocks.com.br/" target="_blank">
-                    <img src="https://uploaddeimagens.com.br/images/004/150/349/original/BI.png?1668023164" alt="PowerBi">
-                </a>
-            </div> -->
-            </div>
+            <div class="app-card"><a href="https://rds.grupolocks.com.br/RDWeb" target="_blank" title="SAP"><img src="SAP.png" alt="SAP">SAP</a></div>
+            <div class="app-card"><a href="http://pims.grupolocks.com.br:8380/pimsmc/login.jsp" target="_blank" title="PIMS"><img src="PIMS.png" alt="PIMS">PIMS</a></div>
+            <div class="app-card"><a href="https://fluig.grupolocks.com.br:8082" target="_blank" title="Fluig"><img src="FLUIG.png" alt="Fluig">Fluig</a></div>
+            <div class="app-card"><a href="https://login.microsoftonline.com" target="_blank" title="Outlook"><img src="OUTLOOK.png" alt="Outlook">Outlook</a></div>
+            <div class="app-card"><a href="https://rds.grupolocks.com.br/RDWeb" target="_blank" title="RM"><img src="RM.png" alt="RM">RM</a></div>
+            <div class="app-card"><a href="https://locks.pecuariaonline.com.br/" target="_blank" title="Eco"><img src="eco.png" alt="Eco">Eco</a></div>
+            <div class="app-card"><a href="https://cloud.bry.com.br" target="_blank" title="Bry"><img src="BRY.png" alt="Bry">Bry</a></div>
+            <div class="app-card"><a href="http://colaborador.grupolocks.com.br/rm/web/app/RH/PortalMeuRH/#/login" target="_blank" title="Meu RH"><img src="meurh.png" alt="Meu RH">Meu RH</a></div>
+            <div class="app-card"><a href="https://locks.tracecotton.app/" target="_blank" title="Tracecotton"><img src="tracecotton.png" alt="Tracecotton">Tracecotton</a></div>
+            <div class="app-card"><a href="http://172.20.10.3:8082/Login" target="_blank" title="Agrosig"><img src="AGROSIG.png" alt="Agrosig">Agrosig</a></div>
+            <div class="app-card"><a href="http://172.20.10.7/Reports/browse/" target="_blank" title="Impressão de Etiqueta"><img src="Impressoes_Etiqueta.png" alt="Impressão de Etiqueta">Impressão de Etiqueta</a></div>
+            <div class="app-card"><a href="https://swecom.grupolocks.com.br/" target="_blank" title="Swecom"><img src="swecom.png" alt="Swecom">Swecom</a></div>
+            <div class="app-card"><a href="https://acesso.siast.com.br/Account/Login" target="_blank" title="Siast"><img src="siast.png" alt="Siast">Siast</a></div>
+            <div class="app-card"><a href="https://app.elofy.com.br/" target="_blank" title="Elofy"><img src="elofy.png" alt="Elofy">Elofy</a></div>
+            <div class="app-card"><a href="https://app.powerbi.com/singleSignOn" target="_blank" title="PowerBI"><img src="powerbi.png" alt="PowerBI">PowerBI</a></div>
+            <div class="app-card"><a href="https://login.microsoftonline.com/..." target="_blank" title="SharePoint"><img src="sharepoint.png" alt="SharePoint">SharePoint</a></div>
+            <div class="app-card"><a href="https://paytrack.com.br/" target="_blank" title="Paytrack"><img src="paytrack.png" alt="Paytrack">Paytrack</a></div>
+            <div class="app-card"><a href="https://connect.jacto.com/login" target="_blank" title="Jacto"><img src="jacto.jpge" alt="Jacto">Jacto</a></div>
+            <div class="app-card"><a href="https://portal.zeusagro.com.br/login" target="_blank" title="Zeus"><img src="zeus.png" alt="Zeus">Zeus</a></div>
+            <div class="app-card"><a href="https://www.cropwise.com/protector" target="_blank" title="Protect"><img src="protect.png" alt="Protect">Protect</a></div>
+            <div class="app-card"><a href="https://www.deere.com.br/pt/index.html" target="_blank" title="John Deere"><img src="johndeere.jpeg" alt="John Deere">John Deere</a></div>
         </div>
     </div>
 </body>
