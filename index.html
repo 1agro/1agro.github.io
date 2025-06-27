@@ -67,9 +67,10 @@
         }
 
         .app-card img {
-            width: 100px;
-            height: 100px;
-            object-fit: contain;
+            width: 100%;
+            max-width: 100px;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
             border-radius: 16px;
             background-color: white;
             padding: 10px;
@@ -90,8 +91,7 @@
             }
 
             .app-card img {
-                width: 80px;
-                height: 80px;
+                max-width: 80px;
             }
         }
 
@@ -102,27 +102,7 @@
             }
         }
 
-        .app-card:nth-child(1) { animation-delay: 0.1s; }
-        .app-card:nth-child(2) { animation-delay: 0.2s; }
-        .app-card:nth-child(3) { animation-delay: 0.3s; }
-        .app-card:nth-child(4) { animation-delay: 0.4s; }
-        .app-card:nth-child(5) { animation-delay: 0.5s; }
-        .app-card:nth-child(6) { animation-delay: 0.6s; }
-        .app-card:nth-child(7) { animation-delay: 0.7s; }
-        .app-card:nth-child(8) { animation-delay: 0.8s; }
-        .app-card:nth-child(9) { animation-delay: 0.9s; }
-        .app-card:nth-child(10) { animation-delay: 1.0s; }
-        .app-card:nth-child(11) { animation-delay: 1.1s; }
-        .app-card:nth-child(12) { animation-delay: 1.2s; }
-        .app-card:nth-child(13) { animation-delay: 1.3s; }
-        .app-card:nth-child(14) { animation-delay: 1.4s; }
-        .app-card:nth-child(15) { animation-delay: 1.5s; }
-        .app-card:nth-child(16) { animation-delay: 1.6s; }
-        .app-card:nth-child(17) { animation-delay: 1.7s; }
-        .app-card:nth-child(18) { animation-delay: 1.8s; }
-        .app-card:nth-child(19) { animation-delay: 1.9s; }
-        .app-card:nth-child(20) { animation-delay: 2.0s; }
-        .app-card:nth-child(21) { animation-delay: 2.1s; }
+        .app-card:nth-child(n) { animation-delay: calc(0.05s * var(--i)); }
     </style>
 </head>
 <body>
@@ -130,27 +110,27 @@
 <div class="overlay">
     <h1>Sistemas Grupo Locks</h1>
     <div class="container">
-        <div class="app-card"><a href="https://rds.grupolocks.com.br/RDWeb" target="_blank"><img src="SAP.png" alt="SAP">SAP</a></div>
-        <div class="app-card"><a href="http://pims.grupolocks.com.br:8380/pimsmc/login.jsp" target="_blank"><img src="PIMS.png" alt="PIMS">PIMS</a></div>
-        <div class="app-card"><a href="https://fluig.grupolocks.com.br:8082" target="_blank"><img src="FLUIG.png" alt="Fluig">Fluig</a></div>
-        <div class="app-card"><a href="https://login.microsoftonline.com" target="_blank"><img src="OUTLOOK.png" alt="E-mail">E-mail</a></div>
-        <div class="app-card"><a href="https://rds.grupolocks.com.br/RDWeb" target="_blank"><img src="RM.png" alt="RM">RM</a></div>
-        <div class="app-card"><a href="https://locks.pecuariaonline.com.br/" target="_blank"><img src="eco.png" alt="Eco">Eco</a></div>
-        <div class="app-card"><a href="https://cloud.bry.com.br" target="_blank"><img src="BRY.png" alt="Bry">Bry</a></div>
-        <div class="app-card"><a href="http://colaborador.grupolocks.com.br/rm/web/app/RH/PortalMeuRH/#/login" target="_blank"><img src="meurh.png" alt="Meu RH">Meu RH</a></div>
-        <div class="app-card"><a href="https://locks.tracecotton.app/" target="_blank"><img src="tracecotton.png" alt="Tracecotton">Tracecotton</a></div>
-        <div class="app-card"><a href="http://172.20.10.3:8082/Login" target="_blank"><img src="AGROSIG.png" alt="Agrosig">Agrosig</a></div>
-        <div class="app-card"><a href="http://172.20.10.7/Reports/browse/" target="_blank"><img src="Impressoes_Etiqueta.png" alt="Etiqueta">Etiqueta</a></div>
-        <div class="app-card"><a href="https://swecom.grupolocks.com.br/" target="_blank"><img src="swecom.png" alt="Swecom">Swecom</a></div>
-        <div class="app-card"><a href="https://acesso.siast.com.br/Account/Login" target="_blank"><img src="siast.png" alt="Siast">Siast</a></div>
-        <div class="app-card"><a href="https://app.elofy.com.br/" target="_blank"><img src="elofy.png" alt="Elofy">Elofy</a></div>
-        <div class="app-card"><a href="https://app.powerbi.com/singleSignOn" target="_blank"><img src="powerbi.png" alt="PowerBi">PowerBi</a></div>
-        <div class="app-card"><a href="https://login.microsoftonline.com/..." target="_blank"><img src="sharepoint.png" alt="SharePoint">SharePoint</a></div>
-        <div class="app-card"><a href="https://paytrack.com.br/" target="_blank"><img src="paytrack.png" alt="Paytrack">Paytrack</a></div>
-        <div class="app-card"><a href="https://connect.jacto.com/login" target="_blank"><img src="jacto.jpge" alt="Jacto">Jacto</a></div>
-        <div class="app-card"><a href="https://portal.zeusagro.com.br/login" target="_blank"><img src="zeus.png" alt="Zeus">Zeus</a></div>
-        <div class="app-card"><a href="https://www.cropwise.com/protector" target="_blank"><img src="protect.png" alt="Protect">Protect</a></div>
-        <div class="app-card"><a href="https://www.deere.com.br/pt/index.html" target="_blank"><img src="johndeere.jpeg" alt="John Deere">John Deere</a></div>
+        <div class="app-card" style="--i:1"><a href="https://rds.grupolocks.com.br/RDWeb" target="_blank"><img src="SAP.png" alt="SAP">SAP</a></div>
+        <div class="app-card" style="--i:2"><a href="http://pims.grupolocks.com.br:8380/pimsmc/login.jsp" target="_blank"><img src="PIMS.png" alt="PIMS">PIMS</a></div>
+        <div class="app-card" style="--i:3"><a href="https://fluig.grupolocks.com.br:8082" target="_blank"><img src="FLUIG.png" alt="Fluig">Fluig</a></div>
+        <div class="app-card" style="--i:4"><a href="https://login.microsoftonline.com" target="_blank"><img src="OUTLOOK.png" alt="E-mail">E-mail</a></div>
+        <div class="app-card" style="--i:5"><a href="https://rds.grupolocks.com.br/RDWeb" target="_blank"><img src="RM.png" alt="RM">RM</a></div>
+        <div class="app-card" style="--i:6"><a href="https://locks.pecuariaonline.com.br/" target="_blank"><img src="eco.png" alt="Eco">Eco</a></div>
+        <div class="app-card" style="--i:7"><a href="https://cloud.bry.com.br" target="_blank"><img src="BRY.png" alt="Bry">Bry</a></div>
+        <div class="app-card" style="--i:8"><a href="http://colaborador.grupolocks.com.br/rm/web/app/RH/PortalMeuRH/#/login" target="_blank"><img src="meurh.png" alt="Meu RH">Meu RH</a></div>
+        <div class="app-card" style="--i:9"><a href="https://locks.tracecotton.app/" target="_blank"><img src="tracecotton.png" alt="Tracecotton">Tracecotton</a></div>
+        <div class="app-card" style="--i:10"><a href="http://172.20.10.3:8082/Login" target="_blank"><img src="AGROSIG.png" alt="Agrosig">Agrosig</a></div>
+        <div class="app-card" style="--i:11"><a href="http://172.20.10.7/Reports/browse/" target="_blank"><img src="Impressoes_Etiqueta.png" alt="Etiqueta">Etiqueta</a></div>
+        <div class="app-card" style="--i:12"><a href="https://swecom.grupolocks.com.br/" target="_blank"><img src="swecom.png" alt="Swecom">Swecom</a></div>
+        <div class="app-card" style="--i:13"><a href="https://acesso.siast.com.br/Account/Login" target="_blank"><img src="siast.png" alt="Siast">Siast</a></div>
+        <div class="app-card" style="--i:14"><a href="https://app.elofy.com.br/" target="_blank"><img src="elofy.png" alt="Elofy">Elofy</a></div>
+        <div class="app-card" style="--i:15"><a href="https://app.powerbi.com/singleSignOn" target="_blank"><img src="powerbi.png" alt="PowerBi">PowerBi</a></div>
+        <div class="app-card" style="--i:16"><a href="https://login.microsoftonline.com/..." target="_blank"><img src="sharepoint.png" alt="SharePoint">SharePoint</a></div>
+        <div class="app-card" style="--i:17"><a href="https://paytrack.com.br/" target="_blank"><img src="paytrack.png" alt="Paytrack">Paytrack</a></div>
+        <div class="app-card" style="--i:18"><a href="https://connect.jacto.com/login" target="_blank"><img src="jacto.jpge" alt="Jacto">Jacto</a></div>
+        <div class="app-card" style="--i:19"><a href="https://portal.zeusagro.com.br/login" target="_blank"><img src="zeus.png" alt="Zeus">Zeus</a></div>
+        <div class="app-card" style="--i:20"><a href="https://www.cropwise.com/protector" target="_blank"><img src="protect.png" alt="Protect">Protect</a></div>
+        <div class="app-card" style="--i:21"><a href="https://www.deere.com.br/pt/index.html" target="_blank"><img src="johndeere.jpeg" alt="John Deere">John Deere</a></div>
     </div>
 </div>
 </body>
